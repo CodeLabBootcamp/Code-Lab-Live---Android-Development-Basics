@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CodeLabLive</string>
+    <string name="add">جمع</string>
+    <string name="cannot_divide_by_zero">لا يمكن التقسيم على صفر</string>
+    <string name="divide">تقسيم</string>
+    <string name="multiply">ضرب</string>
+    <string name="please_fill_all_fields">امليء جميع الحقول</string>
+    <string name="result">الناتج</string>
+    <string name="subtract">طرح</string>
+</resources>

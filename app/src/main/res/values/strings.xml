@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CodeLabLive</string>
+    <string name="add">Add</string>
+    <string name="result">Result</string>
+    <string name="subtract">Subtract</string>
+    <string name="multiply">Multiply</string>
+    <string name="divide">Divide</string>
+    <string name="cannot_divide_by_zero">Cannot divide by zero</string>
+    <string name="please_fill_all_fields">Please fill all fields</string>
+    <string name="open_calculator">Open Calculator</string>
+    <string name="open_real_time_calculator">Open Real Time Calculator</string>
+    <string name="open_image">Open Image</string>
+</resources>
