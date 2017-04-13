@@ -4,16 +4,16 @@ import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-import camp.codelab.codelablive.databinding.ActivityMainBinding;
+import camp.codelab.codelablive.databinding.ActivityOldCalcBinding;
 
-public class MainActivity extends AppCompatActivity {
+public class OldCalcActivity extends AppCompatActivity {
 
-    ActivityMainBinding binding;
+    ActivityOldCalcBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_old_calc);
         binding.setVm(new OldCalcViewModel());
 
 

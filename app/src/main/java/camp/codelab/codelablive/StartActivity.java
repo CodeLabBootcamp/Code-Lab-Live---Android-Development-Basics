@@ -25,7 +25,7 @@ public class StartActivity extends AppCompatActivity {
         openCalculatorButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(StartActivity.this, MainActivity.class);
+                Intent intent = new Intent(StartActivity.this, OldCalcActivity.class);
                 startActivity(intent);
             }
         });

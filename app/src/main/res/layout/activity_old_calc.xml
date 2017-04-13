@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="camp.codelab.codelablive.MainActivity">
+        tools:context="camp.codelab.codelablive.OldCalcActivity">
 
         <EditText
             android:id="@+id/number1"

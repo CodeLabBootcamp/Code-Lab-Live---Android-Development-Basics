@@ -16,7 +16,7 @@ public class RealTimeCalculatorActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_real_time_calculator);
 
-        binding.setVm(new CalcViewModel());
+        binding.setVm(new RealTimeCalcViewModel());
 
     }
 

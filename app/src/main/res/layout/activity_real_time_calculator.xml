@@ -5,7 +5,7 @@
 
         <variable
             name="vm"
-            type="camp.codelab.codelablive.CalcViewModel" />
+            type="camp.codelab.codelablive.RealTimeCalcViewModel" />
 
     </data>
 

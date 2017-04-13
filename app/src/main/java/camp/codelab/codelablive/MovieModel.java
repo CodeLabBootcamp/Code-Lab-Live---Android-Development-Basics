@@ -1,5 +1,7 @@
 package camp.codelab.codelablive;
 
+import android.content.Context;
+
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
@@ -316,5 +318,9 @@ public class MovieModel {
         public void setValue(String Value) {
             this.Value = Value;
         }
+    }
+
+    public String getSomething(Context context){
+        return "";
     }
 }

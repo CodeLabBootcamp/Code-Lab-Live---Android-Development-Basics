@@ -7,12 +7,12 @@ import android.databinding.Bindable;
  * Created by Sabri on 4/13/17.
  */
 
-public class CalcViewModel extends BaseObservable {
+public class RealTimeCalcViewModel extends BaseObservable {
 
     private String number1, number2;
     private boolean addB, subB, mulB, divB;
 
-    public CalcViewModel() {
+    public RealTimeCalcViewModel() {
         number1 = "";
         number2 = "";
         addB = true;
@@ -97,7 +97,6 @@ public class CalcViewModel extends BaseObservable {
                     result = number1 / number2;
                 } else {
                     result = 0;
-//                    Toast.makeText(context, R.string.cannot_divide_by_zero, Toast.LENGTH_SHORT).show();
                 }
             } else {
                 result = 0;
@@ -106,7 +105,6 @@ public class CalcViewModel extends BaseObservable {
             return String.valueOf(result);
 
         } else {
-//            Toast.makeText(context, R.string.please_fill_all_fields, Toast.LENGTH_SHORT).show();
             return "0";
         }
     }
