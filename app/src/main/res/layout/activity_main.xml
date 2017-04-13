@@ -1,64 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="camp.codelab.codelablive.MainActivity">
+<layout>
 
-    <EditText
-        android:id="@+id/number1XML"
+    <data>
+
+        <variable
+            name="vm"
+            type="camp.codelab.codelablive.OldCalcViewModel" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="camp.codelab.codelablive.MainActivity">
 
-    <EditText
-        android:id="@+id/number2XML"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/addXML"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/number1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/add" />
+            android:ems="10"
+            android:inputType="number"
+            android:text="@={vm.number1}" />
 
-        <Button
-            android:id="@+id/subXML"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/number2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/subtract" />
+            android:ems="10"
+            android:inputType="number"
+            android:text="@={vm.number2}" />
 
-        <Button
-            android:id="@+id/mulXML"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/multiply" />
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/divXML"
-            android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> vm.add()}"
+                android:text="@string/add" />
+
+            <Button
+                android:id="@+id/sub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> vm.sub()}"
+                android:text="@string/subtract" />
+
+            <Button
+                android:id="@+id/mul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> vm.mul()}"
+                android:text="@string/multiply" />
+
+            <Button
+                android:id="@+id/div"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> vm.div()}"
+                android:text="@string/divide" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/divide" />
+            android:gravity="center"
+            android:text="@{vm.result}"
+            android:textSize="20sp" />
+
 
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/resultXML"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:text="@string/result" />
-
-
-</LinearLayout>
+</layout>

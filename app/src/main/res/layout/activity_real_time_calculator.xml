@@ -1,68 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="camp.codelab.codelablive.RealTimeCalculatorActivity">
+<layout>
 
+    <data>
 
-    <EditText
-        android:id="@+id/number1XML"
+        <variable
+            name="vm"
+            type="camp.codelab.codelablive.CalcViewModel" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="camp.codelab.codelablive.RealTimeCalculatorActivity">
 
-    <EditText
-        android:id="@+id/number2XML"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number" />
 
-    <RadioGroup
-        android:id="@+id/radio_group"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <RadioButton
-            android:id="@+id/add_radio"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/number1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:checked="true"
-            android:text="@string/add" />
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="8"
+            android:text="@={vm.number1}" />
 
-        <RadioButton
-            android:id="@+id/sub_radio"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/number2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/subtract" />
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="8"
+            android:text="@={vm.number2}" />
 
-        <RadioButton
-            android:id="@+id/mul_radio"
-            android:layout_width="wrap_content"
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/multiply" />
+            android:gravity="center"
+            android:orientation="horizontal">
 
-        <RadioButton
-            android:id="@+id/div_radio"
-            android:layout_width="wrap_content"
+            <RadioButton
+                android:id="@+id/add_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="@={vm.addB}"
+                android:text="@string/add" />
+
+            <RadioButton
+                android:id="@+id/sub_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="@={vm.subB}"
+                android:text="@string/subtract" />
+
+            <RadioButton
+                android:id="@+id/mul_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="@={vm.mulB}"
+                android:text="@string/multiply" />
+
+            <RadioButton
+                android:id="@+id/div_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="@={vm.divB}"
+                android:text="@string/divide" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/divide" />
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:text="@{vm.result}"
+            android:textSize="20sp" />
 
-    </RadioGroup>
 
-    <TextView
-        android:id="@+id/resultXML"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_margin="16dp"
-        android:text="@string/result"
-        android:textSize="20sp" />
+        <Button
+            android:id="@+id/my_new_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-</LinearLayout>
+    </LinearLayout>
+</layout>
